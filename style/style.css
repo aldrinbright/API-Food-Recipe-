@@ -590,6 +590,7 @@ li img {
 @media screen and (max-width: 414px){
 .menuBar-bottom{
 top: 500px;
+font-size: 14px;
 }
 }
 .menuBar-bottom button {

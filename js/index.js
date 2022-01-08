@@ -2,17 +2,17 @@ const searchBtn = document.querySelector('#search-btn');
 
 const mealList = document.querySelector('#meal');
 const mealDetailsContent = document.querySelector('.meal-details-content');
-// const finalElement = document.querySelector('meal-details');
+
 const closeBtn = document.querySelector('#close-btn');
 
 const menuUp = document.querySelector('.menuBar');
 
-// const menuLink = document.querySelector('.link')
+
 
 searchBtn.addEventListener('click', getMealList);
 
 mealList.addEventListener('click', getMealRecipe);
-// ham button
+
 
 function scroll() {
     window.scrollTo(0, 320);
@@ -103,7 +103,7 @@ async function getMealRecipe(e) {
     e.preventDefault();
     if (e.target.classList.contains('recipe-btn')) {
         let mealItem = e.target.parentElement.parentElement;
-        // console.log(mealItem);
+        
         const response = await fetch(
             `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`
         );
