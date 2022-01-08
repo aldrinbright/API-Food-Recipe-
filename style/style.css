@@ -22,6 +22,17 @@ html {
     align-items: center;
 }
 
+@media screen and (min-width: 414px){
+    .hamburger{
+       
+        z-index: 10;
+        top: -6px;
+        left: -3px;
+        background: white;
+       
+    }
+}
+
 .ham-btn {
     display: flex;
     position: absolute;
@@ -78,6 +89,14 @@ html {
     justify-content: center;
     align-items: center;
 }
+@media screen and (min-width: 414px){
+.logo{
+    position: absolute;
+    top: 6px;
+    left: 99px;
+}
+}
+
 
 .logo svg {
     background-color: transparent;
@@ -123,6 +142,15 @@ html {
     background-color: #fdfffb;
     border-radius: 25px;
     border: none;
+}
+    @media screen and (min-width: 414px){
+        #signin-btn{
+            top:-6px;
+            right:30px;
+
+        }
+    }
+
 }
 #signin-btn:hover {
     background-color: #07070731;
@@ -201,11 +229,19 @@ html {
 }
 
 #meal {
-    /* display: inline-block; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: 20px;
     border-radius: 20px;
+}
+
+@media screen and (min-width: 414px) {
+    #meal {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 20px;
+        border-radius: 20px;
+    }
 }
 
 .meal-item {
@@ -231,6 +267,13 @@ html {
     -ms-border-radius: 20px 0px 20px 0px;
     -o-border-radius: 20px 0px 20px 0px;
 }
+
+@media screen and (min-width: 414px) {
+    .meal-img img {
+        width: 319px;
+    }
+}
+
 .meal-name {
     color: white;
     padding: 10px;
@@ -300,6 +343,16 @@ html {
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+}
+
+
+@media screen and (min-width: 414px){
+    .meal-details {
+    top: 352px;
+    left: 211px;
+    height: 575px;
+    width: 348px;
+    }
 }
 
 .meal-details::-webkit-scrollbar {
@@ -428,6 +481,11 @@ html {
     -moz-transform: translateX(-300px);
     -ms-transform: translateX(-300px);
     -o-transform: translateX(-300px);
+    border-radius: 0px 0px 30px 0px;
+    -webkit-border-radius: 0px 0px 30px 0px;
+    -moz-border-radius: 0px 0px 30px 0px;
+    -ms-border-radius: 0px 0px 30px 0px;
+    -o-border-radius: 0px 0px 30px 0px;
 }
 
 .menuBar.openUp {
@@ -461,6 +519,12 @@ html {
     height: 450px;
     /* align-items: center; */
 }
+@media screen and (min-width: 414px){
+.menuBar-top{
+    top: 42px;
+}
+}
+
 .menuBar-top .link {
     font-family: UberMoveText, sans-serif;
     font-weight: 500;
@@ -517,7 +581,11 @@ li img {
     position: absolute;
     bottom: 20px;
 }
-
+@media screen and (min-width: 414px){
+.menuBar-bottom{
+top: 500px;
+}
+}
 .menuBar-bottom button {
     cursor: pointer;
     width: 86px;
@@ -543,6 +611,16 @@ li img {
     left: 306px;
     font-family: UberMove, sans-serif;
     font-size: 40px;
+}
+
+@media screen and (min-width: 414px) {
+    #welcome {
+        top: 4px;
+        left: 71px;
+        font-family: UberMove, sans-serif;
+        font-size: 30px;
+        font-weight: 600;
+    }
 }
 
 #bg-1 {

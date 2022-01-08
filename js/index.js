@@ -22,8 +22,8 @@ const menuBtn = document.querySelector('.hamburger');
 
 menuBtn.addEventListener('click', e => {
    
-    document.body.classList.toggle('open');
-    menuUp.classList.add('openUp');
+    menuBtn.classList.toggle('open');
+    menuUp.classList.toggle('openUp');
 });
 
 document.onclick = e => {
