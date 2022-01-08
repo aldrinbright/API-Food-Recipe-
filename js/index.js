@@ -82,7 +82,7 @@ async function getMealList() {
         });
         mealList.classList.remove('notFound');
     } else {
-        html = `We're sorry, but we couldn't locate your food ingredient.`;
+        html = `We're sorry, we couldn't locate your food ingredient.`;
         mealList.classList.add('notFound');
     }
 

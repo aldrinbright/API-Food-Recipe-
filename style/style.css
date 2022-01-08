@@ -401,6 +401,13 @@ html {
     height: 418px;
 }
 
+@media screen and (max-width: 414px){
+#recipe-img{
+    width: 388px;
+    height: 275px;
+}
+}
+
 #close-btn {
     position: absolute;
     cursor: pointer;
@@ -444,6 +451,12 @@ html {
     margin: 10px;
 }
 
+@media screen and (max-width: 414px){
+.recipe-instruction p{
+padding: 25px;
+    margin: 34px;
+}
+}
 /* recipie button  */
 .recipe-btn {
     height: 55px;
