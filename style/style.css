@@ -576,10 +576,10 @@ li img {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 190px;
+    width: 197px;
     align-items: center;
     height: 50px;
-    font-size: 15px;
+    font-size: 16px;
     font-family: UberMoveText, sans-serif;
     font-weight: 500;
     /* border: 2px solid red; */
@@ -588,9 +588,16 @@ li img {
     bottom: 20px;
 }
 @media screen and (max-width: 414px){
-.menuBar-bottom{
+
+    .menuBar-bottom{
+        height: 154px;
+    }
+
+}
+@media screen and (max-width: 414px){
+.menuBar-bottom button{
 top: 500px;
-font-size: 14px;
+font-size: 14px !important;
 }
 }
 .menuBar-bottom button {

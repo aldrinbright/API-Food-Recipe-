@@ -120,7 +120,7 @@ async function getMealRecipe(e) {
 function mealRecipeModal(meal) {
     console.log(meal[0]);
     meal = meal[0];
-
+    
     let html = `
             <h2 class = "recipe-title"> ${meal.strMeal} </h2>
             <p class = "recipe-category">${meal.strCategory}</p>
