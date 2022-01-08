@@ -22,7 +22,7 @@ html {
     align-items: center;
 }
 
-@media screen and (min-width: 414px){
+@media screen and (max-width: 414px){
     .hamburger{
        
         z-index: 10;
@@ -89,7 +89,7 @@ html {
     justify-content: center;
     align-items: center;
 }
-@media screen and (min-width: 414px){
+@media screen and (max-width: 414px){
 .logo{
     position: absolute;
     top: 6px;
@@ -143,7 +143,7 @@ html {
     border-radius: 25px;
     border: none;
 }
-    @media screen and (min-width: 414px){
+    @media screen and (max-width: 414px){
         #signin-btn{
             top:-6px;
             right:30px;
@@ -173,7 +173,7 @@ html {
 }
 
 
-@media screen and (min-width: 414px){
+@media screen and (max-width: 414px){
     #searchbar-main {
     width: 293px;
     }
@@ -241,7 +241,7 @@ html {
     border-radius: 20px;
 }
 
-@media screen and (min-width: 414px) {
+@media screen and (max-width: 414px) {
     #meal {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -274,7 +274,7 @@ html {
     -o-border-radius: 20px 0px 20px 0px;
 }
 
-@media screen and (min-width: 414px) {
+@media screen and (max-width: 414px) {
     .meal-img img {
         width: 319px;
     }
@@ -352,7 +352,7 @@ html {
 }
 
 
-@media screen and (min-width: 414px){
+@media screen and (max-width: 414px){
     .meal-details {
     top: 352px;
     left: 211px;
@@ -525,7 +525,7 @@ html {
     height: 450px;
     /* align-items: center; */
 }
-@media screen and (min-width: 414px){
+@media screen and (max-width: 414px){
 .menuBar-top{
     top: 42px;
 }
@@ -587,7 +587,7 @@ li img {
     position: absolute;
     bottom: 20px;
 }
-@media screen and (min-width: 414px){
+@media screen and (max-width: 414px){
 .menuBar-bottom{
 top: 500px;
 }
@@ -619,7 +619,7 @@ top: 500px;
     font-size: 40px;
 }
 
-@media screen and (min-width: 414px) {
+@media screen and (max-width: 414px) {
     #welcome {
         top: 4px;
         left: 71px;
