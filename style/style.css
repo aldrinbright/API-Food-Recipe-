@@ -343,6 +343,7 @@ html {
 
 #close-btn {
     position: absolute;
+    cursor: pointer;
     right: 20px;
     top: 20px;
     width: 35px;
