@@ -172,6 +172,12 @@ html {
     height: 40px;
 }
 
+
+@media screen and (min-width: 414px){
+    #searchbar-main {
+    width: 293px;
+    }
+}
 #search-btn {
     cursor: pointer;
     font-size: 20px;
