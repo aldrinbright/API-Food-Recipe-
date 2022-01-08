@@ -363,6 +363,7 @@ html {
 
 .meal-details::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
 }
 .meal-details::-webkit-scrollbar-track {
     background: #ffc043;
