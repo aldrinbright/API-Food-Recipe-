@@ -6,6 +6,7 @@ const mealDetailsContent = document.querySelector('.meal-details-content');
 const closeBtn = document.querySelector('#close-btn');
 
 const menuUp = document.querySelector('.menuBar');
+const menuBtn = document.querySelector('.hamburger');
 
 
 
@@ -14,18 +15,19 @@ searchBtn.addEventListener('click', getMealList);
 mealList.addEventListener('click', getMealRecipe);
 
 
-function scroll() {
-    window.scrollTo(0, 320);
-}
 
-const menuBtn = document.querySelector('.hamburger');
 
 menuBtn.addEventListener('click', e => {
-   
+    e.stopPropagation();
     menuBtn.classList.toggle('open');
     menuUp.classList.toggle('openUp');
 });
 
+
+
+function scroll() {
+    window.scrollTo(0, 320);
+}
 document.onclick = e => {
     
     e.preventDefault();
@@ -43,6 +45,7 @@ document.onclick = e => {
     ) {
         menuUp.classList.remove('openUp');
         menuBtn.classList.remove('open');
+        // menuBtn.removeEventListener('click',true);
     }
 };
 
@@ -103,7 +106,7 @@ async function getMealRecipe(e) {
     e.preventDefault();
     if (e.target.classList.contains('recipe-btn')) {
         let mealItem = e.target.parentElement.parentElement;
-        
+        // console.log(mealItem);
         const response = await fetch(
             `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`
         );
