@@ -8,14 +8,15 @@ const closeBtn = document.querySelector('#close-btn');
 const menuUp = document.querySelector('.menuBar');
 const menuBtn = document.querySelector('.hamburger');
 
+// recipe close button
 
+closeBtn.addEventListener('click', () => {
+    mealDetailsContent.parentElement.classList.remove('showRecipe');
+});
 
 searchBtn.addEventListener('click', getMealList);
 
 mealList.addEventListener('click', getMealRecipe);
-
-
-
 
 menuBtn.addEventListener('click', e => {
     e.stopPropagation();
@@ -23,14 +24,11 @@ menuBtn.addEventListener('click', e => {
     menuUp.classList.toggle('openUp');
 });
 
-
-
 function scroll() {
     window.scrollTo(0, 320);
 }
 document.onclick = e => {
-    
-    e.preventDefault();
+    // e.preventDefault();
 
     if (
         e.target.className !== 'menuBar openUp' &&
@@ -41,7 +39,6 @@ document.onclick = e => {
         e.target.className !== 'link' &&
         e.target.className !== 'menuBar-btn-2' &&
         e.target.id !== 'menuBar-btn'
-        
     ) {
         menuUp.classList.remove('openUp');
         menuBtn.classList.remove('open');
@@ -49,18 +46,13 @@ document.onclick = e => {
     }
 };
 
-
-
-
 async function getMealList() {
-    
     let searchInputTxt = document.getElementById('searchbar-main').value.trim();
     let searchInputTxt2 = document.getElementById('search-area').value.trim();
-        if(searchInputTxt === ""){
-            return
-       
-        }
-   
+    if (searchInputTxt === '') {
+        return;
+    }
+
     const response = await fetch(
         `https://themealdb.com/api/json/v1/1/filter.php?i=${searchInputTxt}`
     );
@@ -70,11 +62,9 @@ async function getMealList() {
     console.log(data);
 
     let html = '';
-    
+
     if (data.meals) {
         data.meals.forEach(meal => {
-           
-
             html += `
             
             <div class="meal-item" data-id ="${meal.idMeal}">
@@ -96,14 +86,13 @@ async function getMealList() {
         mealList.classList.add('notFound');
     }
 
-   
     mealList.innerHTML = html;
 }
 
 // get meal recipe
 
 async function getMealRecipe(e) {
-    e.preventDefault();
+    // e.preventDefault();
     if (e.target.classList.contains('recipe-btn')) {
         let mealItem = e.target.parentElement.parentElement;
         // console.log(mealItem);
@@ -118,9 +107,9 @@ async function getMealRecipe(e) {
 // create a modal
 
 function mealRecipeModal(meal) {
-    console.log(meal[0]);
+    // console.log(meal[0]);
     meal = meal[0];
-    
+
     let html = `
             <h2 class = "recipe-title"> ${meal.strMeal} </h2>
             <p class = "recipe-category">${meal.strCategory}</p>
@@ -139,10 +128,3 @@ function mealRecipeModal(meal) {
     mealDetailsContent.innerHTML = html;
     mealDetailsContent.parentElement.classList.add('showRecipe');
 }
-
-// close button
-
-closeBtn.addEventListener('click', () => {
-    mealDetailsContent.parentElement.classList.remove('showRecipe');
-});
-
