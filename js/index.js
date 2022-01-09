@@ -50,6 +50,11 @@ async function getMealList() {
     let searchInputTxt = document.getElementById('searchbar-main').value.trim();
     let searchInputTxt2 = document.getElementById('search-area').value.trim();
     if (searchInputTxt === '') {
+        let  html = "";
+        html = `Please enter the Ingredient.`;
+        mealList.innerHTML = html;
+        mealList.classList.add('notFound');
+        
         return;
     }
 
