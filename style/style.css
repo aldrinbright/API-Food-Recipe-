@@ -233,6 +233,8 @@ html {
 
 #meal {
     display: grid;
+    position: absolute;
+    top: -92px;
     grid-template-columns: repeat(4, 1fr);
     margin: 20px;
     border-radius: 20px;
@@ -241,9 +243,11 @@ html {
 @media screen and (max-width: 414px) {
     #meal {
         display: grid;
+        top: -40px;
         grid-template-columns: repeat(1, 1fr);
         margin: 20px;
         border-radius: 20px;
+        text-align: justify;
     }
 }
 
@@ -349,7 +353,7 @@ html {
 
 @media screen and (max-width: 414px){
     .meal-details {
-    top: 352px;
+     top: 556px;;
     left: 211px;
     height: 575px;
     width: 348px;

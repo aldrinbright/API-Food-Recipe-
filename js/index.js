@@ -24,9 +24,6 @@ menuBtn.addEventListener('click', e => {
     menuUp.classList.toggle('openUp');
 });
 
-function scroll() {
-    window.scrollTo(0, 320);
-}
 document.onclick = e => {
     // e.preventDefault();
 
@@ -42,19 +39,35 @@ document.onclick = e => {
     ) {
         menuUp.classList.remove('openUp');
         menuBtn.classList.remove('open');
-        // menuBtn.removeEventListener('click',true);
     }
 };
 
 async function getMealList() {
     let searchInputTxt = document.getElementById('searchbar-main').value.trim();
-    let searchInputTxt2 = document.getElementById('search-area').value.trim();
+    // let searchInputTxt2 = document.getElementById('search-area').value.trim();
     if (searchInputTxt === '') {
-        let  html = "";
-        html = `Please enter the Ingredient.`;
+        const errAdd = setTimeout(errMsg, 0);
+        const remRem = setTimeout(removeErr, 2000);
+        return;
+    }
+
+    function errMsg() {
+        let html = '';
+        html = `<strong>Please enter the Ingredient.<strong>`;
         mealList.innerHTML = html;
         mealList.classList.add('notFound');
-        
+        return;
+    }
+
+    function errMsg2() {
+        html = `We're sorry, we couldn't find your food ingredient. Search for <strong> chicken, rice, or bread <strong>.`;
+        mealList.classList.add('notFound');
+    }
+
+    function removeErr() {
+        let html;
+        html = '';
+        mealList.innerHTML = html;
         return;
     }
 
@@ -62,7 +75,6 @@ async function getMealList() {
         `https://themealdb.com/api/json/v1/1/filter.php?i=${searchInputTxt}`
     );
     const data = await response.json();
-    scroll();
 
     console.log(data);
 
@@ -87,8 +99,7 @@ async function getMealList() {
         });
         mealList.classList.remove('notFound');
     } else {
-        html = `We're sorry, we couldn't locate your food ingredient.`;
-        mealList.classList.add('notFound');
+        errMsg2();
     }
 
     mealList.innerHTML = html;
@@ -97,7 +108,7 @@ async function getMealList() {
 // get meal recipe
 
 async function getMealRecipe(e) {
-    // e.preventDefault();
+    e.preventDefault();
     if (e.target.classList.contains('recipe-btn')) {
         let mealItem = e.target.parentElement.parentElement;
         // console.log(mealItem);
