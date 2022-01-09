@@ -112,12 +112,16 @@ async function getMealRecipe(e) {
     if (e.target.classList.contains('recipe-btn')) {
         let mealItem = e.target.parentElement.parentElement;
         // console.log(mealItem);
+        // console.log(e.target);
         const response = await fetch(
             `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`
         );
         const data = await response.json();
         mealRecipeModal(data.meals);
     }
+    // else{
+    //     console.log("oops");
+    // }
 }
 
 // create a modal
