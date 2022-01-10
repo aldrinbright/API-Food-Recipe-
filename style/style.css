@@ -88,6 +88,7 @@ html {
     /* position: relative; */
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 @media screen and (max-width: 414px){
 .logo{
