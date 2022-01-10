@@ -196,6 +196,11 @@ html {
     background-color: #050505e8;
 }
 
+#search-btn:focus{
+    background-color: #E11900;
+    
+}
+
 #searchbar-main {
     padding: 10px;
     font-size: 20px;
