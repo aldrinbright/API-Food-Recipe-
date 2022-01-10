@@ -8,6 +8,8 @@ const closeBtn = document.querySelector('#close-btn');
 const menuUp = document.querySelector('.menuBar');
 const menuBtn = document.querySelector('.hamburger');
 
+const searchBar = document.querySelector('#searchbar-main');
+
 // recipe close button
 
 closeBtn.addEventListener('click', () => {
@@ -23,6 +25,18 @@ menuBtn.addEventListener('click', e => {
     menuBtn.classList.toggle('open');
     menuUp.classList.toggle('openUp');
 });
+
+searchBar.addEventListener('keyup', (e) =>{
+    if(e.keyCode === 13){
+        
+       
+        searchBtn.click();
+    }
+} )
+
+
+
+
 
 document.onclick = e => {
     // e.preventDefault();
