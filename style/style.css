@@ -20,16 +20,14 @@ html {
     background-color: rgba(0, 0, 0, 0);
     justify-content: center;
     align-items: center;
+    display: none;
 }
 
-@media screen and (max-width: 414px){
-    .hamburger{
-       
+@media screen and (max-width: 414px) {
+    .hamburger {
         z-index: 10;
         top: -6px;
         left: -3px;
-       
-       
     }
 }
 
@@ -84,20 +82,29 @@ html {
 
 /* logo */
 .logo {
+    width: 100px;
+    height: 100px;
     display: flex;
     /* position: relative; */
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
-@media screen and (max-width: 414px){
-.logo{
-    position: absolute;
-    top: 6px;
-    left: 99px;
-}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
 }
 
+@media screen and (max-width: 414px) {
+    .logo {
+        position: absolute;
+        top: 6px;
+        left: 99px;
+    }
+}
 
 .logo svg {
     background-color: transparent;
@@ -109,6 +116,7 @@ html {
     background-color: #fff2d900;
     position: relative;
     display: flex;
+    justify-content: center;
 }
 
 .searchbar-nav {
@@ -134,6 +142,7 @@ html {
 }
 
 #signin-btn {
+    display: none;
     cursor: pointer;
     font-size: 20px;
     position: absolute;
@@ -144,14 +153,12 @@ html {
     border-radius: 25px;
     border: none;
 }
-    @media screen and (max-width: 414px){
-        #signin-btn{
-            top:-6px;
-            right:30px;
-
-        }
+@media screen and (max-width: 414px) {
+    #signin-btn {
+        top: -6px;
+        right: 30px;
     }
-
+}
 
 #signin-btn:hover {
     background-color: #07070731;
@@ -173,10 +180,9 @@ html {
     height: 40px;
 }
 
-
-@media screen and (max-width: 414px){
+@media screen and (max-width: 414px) {
     #searchbar-main {
-    width: 293px;
+        width: 293px;
     }
 }
 #search-btn {
@@ -197,9 +203,8 @@ html {
     background-color: #050505e8;
 }
 
-#search-btn:focus{
-    background-color: #E11900;
-    
+#search-btn:focus {
+    background-color: #e11900;
 }
 
 #searchbar-main {
@@ -221,8 +226,6 @@ html {
 }
 
 /* meal-items */
-
-
 
 .meal-result {
     top: 25px;
@@ -246,7 +249,7 @@ html {
     border-radius: 20px;
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 768px) {
     #meal {
         display: grid;
         top: -40px;
@@ -254,16 +257,17 @@ html {
         margin: 20px;
         border-radius: 20px;
         text-align: justify;
+        font-size: 20px;
     }
 }
 
 .meal-item {
     background-color: rgb(0, 0, 0);
-    
+
     margin: 15px;
     height: auto;
     border-radius: 20px 0px 20px 0px;
-    
+
     -webkit-border-radius: 20px 0px 20px 0px;
     -moz-border-radius: 20px 0px 20px 0px;
     -ms-border-radius: 20px 0px 20px 0px;
@@ -355,14 +359,15 @@ html {
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
 }
-
-
-@media screen and (max-width: 414px){
+.meal-details-content {
+    width: 100%;
+}
+@media screen and (max-width: 768px) {
     .meal-details {
-     top: 556px;;
-    left: 211px;
-    height: 575px;
-    width: 348px;
+        top: 45vh;
+        left: 211px;
+        height: 575px;
+        width: 85%;
     }
 }
 
@@ -397,21 +402,18 @@ html {
     background: #e11a0096;
 }
 .recipe-meal-img img {
-    width: 450px;
-    height: 250px;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 10px;
 }
 
-#recipe-img {
-    width: 450px;
-    height: 418px;
-}
-
-@media screen and (max-width: 414px){
-#recipe-img{
-    width: 388px;
-    height: 275px;
-}
+@media screen and (max-width: 414px) {
+    #recipe-img {
+        width: 388px;
+        height: 275px;
+    }
 }
 
 #close-btn {
@@ -457,11 +459,11 @@ html {
     margin: 10px;
 }
 
-@media screen and (max-width: 414px){
-.recipe-instruction p{
-padding: 25px;
-    margin: 34px;
-}
+@media screen and (max-width: 414px) {
+    .recipe-instruction p {
+        padding: 25px;
+        margin: 34px;
+    }
 }
 /* recipie button  */
 .recipe-btn {
@@ -485,12 +487,12 @@ padding: 25px;
     margin-bottom: 20px;
     height: 20px;
     background: white;
-    
 }
 
 /* menu bar  */
 
 .menuBar {
+    display: none;
     position: absolute;
     /*border: 2px solid red;
     */
@@ -516,6 +518,7 @@ padding: 25px;
 }
 
 .menuBar.openUp {
+    display: none;
     transform: translateX(0px);
     -webkit-transform: translateX(0px);
     -moz-transform: translateX(0px);
@@ -546,10 +549,10 @@ padding: 25px;
     height: 450px;
     /* align-items: center; */
 }
-@media screen and (max-width: 414px){
-.menuBar-top{
-    top: 42px;
-}
+@media screen and (max-width: 414px) {
+    .menuBar-top {
+        top: 42px;
+    }
 }
 
 .menuBar-top .link {
@@ -608,18 +611,16 @@ li img {
     position: absolute;
     bottom: 20px;
 }
-@media screen and (max-width: 414px){
-
-    .menuBar-bottom{
+@media screen and (max-width: 414px) {
+    .menuBar-bottom {
         height: 154px;
     }
-
 }
-@media screen and (max-width: 414px){
-.menuBar-bottom button{
-top: 500px;
-font-size: 14px !important;
-}
+@media screen and (max-width: 414px) {
+    .menuBar-bottom button {
+        top: 500px;
+        font-size: 14px !important;
+    }
 }
 .menuBar-bottom button {
     cursor: pointer;
@@ -643,24 +644,34 @@ font-size: 14px !important;
     /* display: flex; */
     position: absolute;
     top: 49px;
-    left: 306px;
+    left: 347px;
     font-family: UberMove, sans-serif;
     font-size: 40px;
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 768px) {
     #welcome {
-        top: 4px;
-        left: 71px;
+        top: -7px;
+        left: 50%;
         font-family: UberMove, sans-serif;
-        font-size: 30px;
+        font-size: 20px;
         font-weight: 600;
+        margin-top: 25px;
+        transform: translateX(-50%);
+    }
+
+    #bg-1 {
+        width: 100%;
+    }
+
+    #bg-2 {
+        width: 100%;
     }
 }
 
 #bg-1 {
     position: absolute;
-    top: -74px;
+    top: -125px;
     left: 0px;
     z-index: -2;
     /* width: 50vh; */
@@ -670,7 +681,7 @@ font-size: 14px !important;
 
 #bg-2 {
     position: absolute;
-    top: -74px;
+    top: -125px;
     right: 0px;
     z-index: -2;
     /* width: 50vh; */
